@@ -36,12 +36,17 @@ type Option<T> = T | undefined | null;
 // Then we have the run function, which does 
 // the transformation:
 
+
+// change the type signature of the run function to allow the input 
+//type T and the output type U to be different:
 function run<T, U>(
     input: Option<T>,
     transform: (_: T) => Option<U>
 ): Option<U> {
     if (input === null || input === undefined) {
         return input as Option<U>;
+        // we can safely cast since null and undefined 
+        //are valid for Option<U>
     }
     return transform(input);
 }
