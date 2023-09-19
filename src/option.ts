@@ -36,12 +36,12 @@ type Option<T> = T | undefined | null;
 // Then we have the run function, which does 
 // the transformation:
 
-function run<T>(
+function run<T, U>(
     input: Option<T>,
-    transform: (_: T) => Option<T>
-): Option<T> {
+    transform: (_: T) => Option<U>
+): Option<U> {
     if (input === null || input === undefined) {
-        return input;
+        return input as Option<U>;
     }
     return transform(input);
 }
