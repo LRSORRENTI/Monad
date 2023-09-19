@@ -1,8 +1,8 @@
-function square(x: number): number {
+export function square(x: number): number {
     return x * x;
 }
 
-function addOne(x: number): number {
+export function addOne(x: number): number {
     return x + 1;
 } 
 
