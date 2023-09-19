@@ -128,5 +128,9 @@ function getPetNickname(): Option<string> {
 }
 
 
-
-
+// Monads are a design pattern that facilitate the 
+// ability to chain operations while Monad manages 
+// the work behind the scenes, in this option.ts file,
+// we handle possible missing values via Monad, and 
+// inside of the monadWithLogging.ts file we manage 
+// log concatenation behind the scenes via Monad
